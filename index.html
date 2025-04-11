@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NIH DAVE Services</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #007BFF;
+            color: white;
+            margin: 0;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .service-box {
+            background-color: red;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease-in-out;
+            font-size: 18px;
+        }
+        .service-box:hover {
+            transform: translateY(-5px);
+        }
+        .service-box h3 {
+            margin-top: 0;
+        }
+        .contact-form {
+            background-color: green;
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .confirmation {
+            color: #00ff00;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+        }
+        footer {
+            padding: 20px;
+            background-color: #000;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="font-size: 32px;">Welcome to NIH DAVE Services</h1>
+        <p style="font-size: 20px;">Professional assistance at your fingertips</p>
+    </header>
+
+    <section>
+        <h2 style="font-size: 26px;">Services Offered</h2>
+        <div class="services">
+            <div class="service-box">
+                <h3>BOT Deployment</h3>
+                <p>Automated bot setup for messaging, support, or data handling across platforms.</p>
+            </div>
+            <div class="service-box">
+                <h3>KUCCPS Application</h3>
+                <p>Assistance in applying through Kenya Universities and Colleges Central Placement Service.</p>
+            </div>
+            <div class="service-box">
+                <h3>HEF Application</h3>
+                <p>Guidance on applying for the Higher Education Fund for student support.</p>
+            </div>
+            <div class="service-box">
+                <h3>HELB Appeal</h3>
+                <p>Support for students appealing for increased financial aid from HELB.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2 style="font-size: 26px;">Contact Me</h2>
+        <div class="contact-form">
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="senderEmail" placeholder="Your Email" required>
+                <input type="email" name="receiverEmail" value="davymnoma3@gmail.com" readonly>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div class="confirmation" id="confirmationMessage">
+                FORM SUBMITTED SUCCESSFULLY, THANK YOU
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 NIH DAVE | Email: davymnoma3@gmail.com (or call or WhatsApp me through +254748164088)</p>
+        <p>Follow me at FACEBOOK, TIKTOK, TWITTER @nihdave</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById("contactForm");
+        const confirmation = document.getElementById("confirmationMessage");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            confirmation.style.display = "block";
+            form.reset();
+        });
+    </script>
+</body>
+</html>
